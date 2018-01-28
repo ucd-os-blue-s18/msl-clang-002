@@ -1,3 +1,11 @@
+# Blue Team Notes
+
+## API Implementation
+A good portion of this assignment is just implementing the API in the `rb_node.h` file, so let's make sure to use that as our roadmap. This implementation should be in `rb_node.c`. Input/output can presumably remain inside of the `main.c` file. 
+
+## Development branches
+When developing features, let's create a new branch (e.g. "development"). Once we're finished and it's (apparently) bug free, we can merge it into master. This makes it easier to utilize our own commit histories during development without stepping on each other's toes and reserve the master branch for feature-complete commits. We may also want to utilize pull requests in the future to do some code reviewing, but that's probably overkill here.
+
 # C Programming Assignment 2 (IN PROGRESS)
 
 _red-black trees in C_
