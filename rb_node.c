@@ -1,5 +1,6 @@
 #include <stddef.h>
 #include <string.h>
+#include <malloc.h>
 
 #include "rb_node.h"
 
@@ -12,11 +13,11 @@ rb_find(const struct rb_node *tree, const struct rb_node *node){
     int result = strcmp(node->word, tree->word);
 
     if(result == 0){
-        return tree;
+        return (struct rb_node *) tree;
     }
 
     if(result < 0){
-        if(tree->left == NULL){
+        if(tree->left == &RB_NULL){
             return NULL;
         }
         else {
@@ -25,7 +26,7 @@ rb_find(const struct rb_node *tree, const struct rb_node *node){
     }
 
     else if(result > 0){
-        if(tree->right == NULL){
+        if(tree->right == &RB_NULL){
             return NULL;
         }
         else {
