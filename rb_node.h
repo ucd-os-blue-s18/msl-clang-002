@@ -85,6 +85,19 @@ void
 rb_right_rotate(struct rb_node *tree, struct rb_node *node);
 
 /**
+ * @brief Creates a new tree with an empty root node
+ *
+ * This function creates a new tree with an "empty" root node
+ * which is initialized in such a way as to be usable with the
+ * rb_insert function.
+ *
+ * @return A pointer to the new root node
+ */
+
+struct rb_node *
+rb_create_tree();
+
+/**
  * @brief Inserts a new node into the tree.
  *
  * This function inserts a new node @p node with a key that
