@@ -47,3 +47,23 @@ rb_create_tree(){
 
     return root;
 }
+
+struct rb_node *
+rb_insert(struct rb_node *tree, struct rb_node *node){
+
+    // Inserting into empty tree
+    if (tree->word == NULL){
+        tree->word = node->word;
+        tree->count = 1;
+        tree->color = RB_BLACK;
+        return tree;
+    }
+
+    // Check if value already exists
+    struct rb_node *result = rb_find(tree, node);
+    if(result){
+        result->count++;
+        return NULL;
+    }
+
+}
